@@ -17,6 +17,7 @@ frameRate(6);
 
 function draw() {
 
+strokeWeight(10);
 stroke(255);
 
 for(var x = 0; x < windowWidth; x += space){
@@ -33,9 +34,16 @@ if(x > windowWidth){
 }
 
 if(y > windowHeight + 500){
+  fill(0, 90);
+  noStroke();
+  rectMode(RADIUS)
+  rect(windowWidth/2, windowHeight/2,300,60);
+
+  noStroke();
   textAlign(CENTER,CENTER);
-  textSize(20);
-  fill(255);
+  textSize(40);
+  textStyle(BOLD);
+  fill(255, 200);
   text('PRESS FOR A NEW TEXTURE', windowWidth/2,windowHeight/2);
 }
 }
